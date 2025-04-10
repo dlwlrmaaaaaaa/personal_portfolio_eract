@@ -5,6 +5,7 @@ import { HiArrowRight } from 'react-icons/hi'
 import { icons } from '../icons'
 import { TbTriangle, TbTriangleFilled } from 'react-icons/tb'
 import { BsTriangleFill } from 'react-icons/bs'
+import { BiDownload } from 'react-icons/bi'
 const About = () => {
 
   return (
@@ -18,7 +19,7 @@ const About = () => {
         <p className='lg:w-96 font-poppins'>Not that average pick-me guy. I'm a full-stack developer, designer, and a tech enthusiast. I love to design beautiful and user-friendly interfaces. Always curious to learn new things :)</p>
 
         <div className='flex gap-5'>
-          <button className='bg-primary w-full py-2 font-poppins rounded-md'>My CV</button>
+           <a href="/resume/Marucut-Justin.pdf"  className='bg-primary w-full py-2 font-poppins rounded-md flex items-center justify-center gap-2 font-semibold' download>My CV <BiDownload/></a>
           <button className='border border-primary w-full py-2 font-poppins rounded-md' id='project_btn'><a href="#projects">Projects</a></button>
         </div> 
       <div className="flex gap-5 items-center justify-center">
