@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+#project_btn{
+  position: relative;
+  overflow: hidden;
+}
+
+#project_btn::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #77F0A5;
+  transition: width 0.5s ease, border-radius 1s ease;
+  z-index: -10;
+}
+
+#project_btn:hover:before{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+}
 
 .underline-hover {
   position: relative;

@@ -12,10 +12,10 @@ export const NavBar = () => {
     }
 
     const navName = [
-        {name: 'Home', link: '/'},
-        {name: 'About', link: '/about'},
-        {name: 'Projects', link: '/projects'},
-        {name: 'Contact', link: '/contact'},     
+        {name: 'Home', link: '#home'},
+        {name: 'About', link: '#about'},
+        {name: 'Projects', link: '#projects'},
+        {name: 'Contact', link: '#contact'},     
     ]
 
     const navBar = () => {
@@ -50,13 +50,8 @@ export const NavBar = () => {
         </div>
         </div> */}
 
-            <div className="flex justify-between p-4 lg:py-4 lg:px-10 ">
-                <div className='flex gap-2'>
-                    <BsInstagram className='text-xl'/>
-                    <BsLinkedin className='text-xl'/>
-                    <BsGithub className='text-xl'/>
-                    <BsFacebook className='text-xl'/>
-                </div>
+            <div className="flex justify-center items-center p-4 lg:py-4 lg:px-10 ">
+            
                    { !isClick ?
                     <FaBars className='cursor-pointer lg:hidden ' onClick={handleClick}/>
                     :
@@ -65,9 +60,7 @@ export const NavBar = () => {
                     <ul className='lg:flex gap-10 items-center justify-center hidden'> 
                         {navBar()}
                     </ul>
-                    <button className='flex  items-center gap-1 bg-primary px-4 py-1 rounded-md font-poppins lg:flex hidden'>
-                        Download CV <FaCloudDownloadAlt/>
-                    </button>
+           
             </div>
 
             { isClick && <div className='h-52 flex flex-col lg:hidden'>
